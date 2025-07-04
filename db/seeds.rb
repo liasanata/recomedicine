@@ -1,1 +1,1 @@
-User.create!(name: "admin", email: "liasanata354469@gmail.com", password: "Shiki-6991", password_confirmation: "Shiki-6991", role: 1)
+User.create!(name: "admin", email: "runteq@runteq.com", password: "rantekun", password_confirmation: "rantekun", role: 1)
