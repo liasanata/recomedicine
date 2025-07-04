@@ -1,0 +1,18 @@
+<nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar">
+  <div class="position-sticky pt-3 sidebar-sticky">
+    <ul class="nav flex-column">
+      <li class="nav-item">
+         link_to admin_users_path, class: "nav-link #{active_if('admin/users')}" do %>
+          <i class="bi bi-file-earmark"></i>
+          <%= t('admin.users.index.title') %>
+        end %>
+      </li>
+      <li class="nav-item">
+         link_to admin_boards_path, class: "nav-link #{active_if('admin/boards')}" do %>
+          <i class="bi bi-person"></i>
+          <%= t('admin.boards.index.title') %>
+          end %>
+      </li>
+    </ul>
+  </div>
+</nav>

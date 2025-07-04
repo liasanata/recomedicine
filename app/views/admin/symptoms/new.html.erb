@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="card">
+    <div class="card-header">
+      症状登録
+    </div>
+    <div class="card-body">
+      <%= form_with model: @symptom, url: admin_symptoms_path do |f| %>
+        <%= render 'admin/shared/error_messages', object: f.object %>
+        <div class="mb-3">
+          <%= f.label :name %>
+          <%= f.text_field :name, class: 'form-control' %>
+        </div>
+        <div class="mb-3">
+        <%= f.submit class: 'btn btn-primary' %>
+      <% end %>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,8 @@
+<%= form_with model: @symptom, url: admin_symptom_path(@symptom) do |f| %>
+  <%= render 'admin/shared/error_messages', object: f.object %>
+  <div class="mb-3">
+    <%= f.label :name %>
+    <%= f.text_field :name, class: 'form-control' %>
+  </div>
+  <%= f.submit class: 'btn btn-primary' %>
+<% end %>

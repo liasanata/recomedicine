@@ -1,0 +1,15 @@
+<% content_for(:title, t('.title')) %>
+<main class="form-signin w-100 m-auto">
+  <%= render 'shared/header'%>
+  <%= render 'shared/flash_message' %>
+  <%= form_with url: admin_login_path do |f| %>
+    <%= f.label :email %>
+    <%= f.email_field :email %>
+  
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+  
+    <%= f.submit "ログイン" %>
+  <% end %>
+  <%= render 'admin/shared/footer'%>
+</main>

@@ -1,0 +1,15 @@
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container">
+        <%= link_to "", admin_root_path, class: "navbar__brand navbar__mainLogo" %>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-md-auto align-items-center">
+            <li>
+              <%= link_to "Recomedicine", admin_root_path, class: "btn btn-primary" %>
+            </li>
+            <div class="nav-item text-nowrap">
+              <%= link_to "ログアウト", admin_logout_path, method: :delete , local: true, class: 'nav-link px-3' %>
+            </div>
+          </ul>
+        </div>
+      </div>
+    </nav>

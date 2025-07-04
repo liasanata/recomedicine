@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="card">
+    <div class="card-header">
+      成分編集
+    </div>
+    <div class="card-body">
+      <%= render 'form', ingredient: @ingredient %>
+      <%= button_to "削除", admin_ingredient_path(@ingredient), method: :delete %>
+    </div>
+  </div>
+</div>

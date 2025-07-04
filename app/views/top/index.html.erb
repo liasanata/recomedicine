@@ -1,0 +1,21 @@
+<%= form_with url: '', method: :get do %>
+  <%= check_box_tag 'problem_check[]', '1' %>
+  <%= label_tag 'problem_check_1', "38度以上の高熱がある方" %>
+    <%= check_box_tag 'problem_check[]', '1' %>
+  <%= label_tag 'problem_check_2', "発熱が4日以上続いている方" %>
+    <%= check_box_tag 'problem_check[]', '1' %>
+  <%= label_tag 'problem_check_3', "妊婦または妊娠していると思われる方" %>
+    <%= check_box_tag 'problem_check[]', '1' %>
+  <%= label_tag 'problem_check_4', "医薬品でアレルギーの既往歴がある方" %>
+    <%= check_box_tag 'problem_check[]', '2' %>
+  <%= label_tag 'problem_check_5', "他の医薬品を服用している方" %>
+    <%= check_box_tag 'problem_check[]', '2' %>
+  <%= label_tag 'problem_check_6', "医師または歯科医師の治療を受けている方" %>
+    <%= check_box_tag 'problem_check[]', '2' %>
+  <%= label_tag 'problem_check_7', "持病をお持ちの方" %>
+    <%= check_box_tag 'problem_check[]', '2' %>
+  <%= label_tag 'problem_check_8', "服用後乗り物又は機械類の運転操作をする予定のある方" %>
+  <%= check_box_tag 'problem_check[]', '0' %>
+  <%= label_tag 'problem_check_9', "上記に当てはまらない" %>
+  <%= submit_tag "症状入力画面へ" %>
+<% end %>
