@@ -1,0 +1,10 @@
+<div>
+  <h1 class="font-bold text-4xl">症状選択</h1>
+  <%= form_with url: results_path, method: :get do %>
+    <%= @symptoms.each do |symptom| %>
+      <%= check_box_tag "symptoms[]", symptom.id, false, id: "symptom_#{symptom.id}" %>
+      <%= label_tag "symptom_#{symptom.id}", symptom.name %>
+    <% end %>
+    <%= submit_tag "おすすめ成分へ" %>
+  <% end %>
+</div>

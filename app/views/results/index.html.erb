@@ -1,0 +1,14 @@
+<h1 class="font-bold text-4xl">結果一覧</h1>
+
+<% if @grouped_ingredients.any? %>
+  <% @grouped_ingredients.each do |symptom_names, ingredients| %>
+    <h2 class="text-2xl font-semibold"><%= symptom_names.join(', ') %>に効く成分</h2>
+    <ul>
+      <% ingredients.each do |ingredient| %>
+        <li><%= ingredient.name %></li>
+      <% end %>
+    </ul>
+  <% end %>
+<% else %>
+  <p>該当する成分はありません。</p>
+<% end %>

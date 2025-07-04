@@ -1,0 +1,8 @@
+<div>
+  <h1 class="font-bold text-4xl">Symptoms#index</h1>
+  <% @symptoms.each do |symptom| %>
+    <p><%= symptom.name %></p>
+    <%= link_to "編集", edit_admin_symptom_path(symptom) %>
+  <% end %>
+  <%= link_to "登録", new_admin_symptom_path %>
+</div>

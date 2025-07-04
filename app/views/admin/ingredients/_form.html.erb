@@ -1,0 +1,16 @@
+<%= form_with model: @ingredient, url: admin_ingredient_path(@ingredient) do |f| %>
+  <%= render 'admin/shared/error_messages', object: f.object %>
+  <div class="mb-3">
+    <%= f.label :name %>
+    <%= f.text_field :name, class: 'form-control' %>
+  </div>
+  <div class="mb-3">
+    <%= f.label :body %>
+    <%= f.text_area :body, class: 'form-control', rows: 5 %>
+  </div>
+  <div class="mb-3">
+    <label for='symptom_id'>対応症状</label>
+    <%= f.text_field :symptom_id, class: "form-control", id:'symptom_id', placeholder: "タグをつける。複数つけるには','で区切ってください。" %>
+  </div>
+  <%= f.submit class: 'btn btn-primary' %>
+<% end %>

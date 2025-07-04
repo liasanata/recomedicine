@@ -1,0 +1,12 @@
+<div>
+  <h1 class="font-bold text-4xl">Ingredients#index</h1>
+  <% @ingredient.each do |ingredient| %>
+    <p><%= ingredient.name %></p>
+    <p><%= ingredient.body %></p>
+    <% ingredient.symptoms.each do |symptom| %>
+      <%= symptom.name %>
+    <% end %>
+    <%= link_to "編集", edit_admin_ingredient_path(ingredient) %>
+  <% end %>
+  <%= link_to "登録", new_admin_ingredient_path %>
+</div>
