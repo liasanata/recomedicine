@@ -1,1 +1,1 @@
-User.create!(name: "admin", email: "runteq@runteq.com", password: "rantekun", password_confirmation: "rantekun", role: 1)
+User.create!(name: "runteq", email: "runteq@runteq.com", password: "rantekun", password_confirmation: "rantekun", role: 1)
