@@ -13,7 +13,7 @@
     "webpack-dev-server": "^3"
   },
   "scripts": {
-  "dev": "cross-env NODE_SERVER=\"localhost\" NODE_OPTIONS='--openssl-legacy-provider' nuxt",
-  "build": "cross-env NODE_SERVER=\"localhost\" NODE_OPTIONS='--openssl-legacy-provider' nuxt build",
+    "dev": "cross-env NODE_SERVER=\"localhost\" NODE_OPTIONS='--openssl-legacy-provider' nuxt",
+    "build": "cross-env NODE_SERVER=\"localhost\" NODE_OPTIONS='--openssl-legacy-provider' nuxt build"
   }
 }
