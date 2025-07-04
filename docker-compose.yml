@@ -1,0 +1,25 @@
+services:
+  db:                             #dbコンテナの設定について記述
+    image: postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+    volumes:
+      - postgres_volume:/var/lib/postgresql/data#/dataまでpathを指定しないとdbの永続化できない。永続化しないとdocker downするたびにdbを作成しないといけない。毎回するのは手間なのでここで永続化しておく。
+    ports:
+      - '3306:3306'
+      
+#rails側のコンテナの設定について記述。apiじゃなくて、webと記述している場合もあります。docker-compose exec(run)の後にはここで指定した名前を記述して、コマンドを叩いています。
+  web:
+    build: .
+    command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
+    volumes:
+      - .:/myapp
+    ports:
+      - 3000:3000
+    stdin_open: true #dockerコンテナを起動したままにできる。コンテナ内に入ってコマンドを打ち込める
+    tty: true          #コンテナを起動させたまま、bashで入れたりできる
+    depends_on:
+      - db
+volumes: #永続化するvolumeの名前を指定してあげる
+  postgres_volume:
